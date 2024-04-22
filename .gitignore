@@ -8,3 +8,10 @@ samples/.DS_Store
 __pycache__
 /__pycache__
 *.pyc
+*.DS_Store
+samples/.DS_Store
+*.json
+/Synthetic__PV_Profiles.egg-info
+/Synthetic_PV_Profiles.egg-info
+samples/.DS_Store
+/dist
