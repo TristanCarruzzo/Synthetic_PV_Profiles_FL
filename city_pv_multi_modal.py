@@ -74,7 +74,7 @@ class CityPV_MultiModal(CityPV_UniModal):
         self.clients_time_series =[]
         client_num=0 # num of the first client in the first mode
         for mode_num, city_name in enumerate(self.city_names):
-            print('[INFO] generating data for ' + city_name)
+            # print('[INFO] generating data for ' + city_name)
             city = CityPV_UniModal(
                         city_name=self.city_names[mode_num],
                         tilt_mean=self.tilt_mean[mode_num], az_mean=self.az_mean[mode_num],

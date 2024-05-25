@@ -55,6 +55,27 @@ class SimpleNN(nn.Module):
     def forward(self, x):
         out = F.relu(self.fc_1(x))
         return self.fc_2(out)
+    
+class TwoLayerNN(nn.Module):
+    def __init__(self, input_dim, hidden_dim1, hidden_dim2, output_dim):
+        super(TwoLayerNN, self).__init__()
+
+        self.input_dim = input_dim
+        self.hidden_dim1 = hidden_dim1
+        self.hidden_dim2 = hidden_dim2
+        self.output_dim = output_dim
+
+        # Define fully connected layers
+        self.fc1 = nn.Linear(input_dim, hidden_dim1)
+        self.fc2 = nn.Linear(hidden_dim1, hidden_dim2)
+        self.fc3 = nn.Linear(hidden_dim2, output_dim)
+
+    def forward(self, x):
+        # Forward pass through each layer with ReLU activation
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
 
 
 class NextCharacterRNN(nn.Module):
