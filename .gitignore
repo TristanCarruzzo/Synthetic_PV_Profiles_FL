@@ -15,3 +15,6 @@ samples/.DS_Store
 /Synthetic_PV_Profiles.egg-info
 samples/.DS_Store
 /dist
+/FL_results
+*.pkl
+.DS_Store
